@@ -1,0 +1,20 @@
+.card-wrapper{
+    width: 12rem;
+    border: 1px solid #d6d3d3;
+    border-radius: 0.3rem;
+    .card-header{
+    background: #aba1eb;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    }
+    .card-body{
+        height: 12rem;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
