@@ -50,7 +50,7 @@ useEffect(() => {
           Copy and paste object, It allows only valid object *
         </div>
         <div>
-          <input className='textInput' value={year} type='number' onChange={e=>setYear(e.target.value)}></input>
+          <input className='textInput'type="text" pattern="\d*" maxlength="4" value={year}   onChange={e=>setYear(e.target.value)}></input>
         </div>
       </div>
     </div>
