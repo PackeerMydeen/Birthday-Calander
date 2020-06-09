@@ -12,20 +12,21 @@ const birthday=[
   }, 
   {
     name:'Mydeen Maheen',
-    birthday:'05/03/2000'
+    birthday:'11/09/2000'
   },
   {
     name:'Rahul',
-    birthday:'10/04/1996'
+    birthday:'05/15/2020'
   },
   {
-    name:'Raj',
+    name:'Maji',
     birthday:'10/04/1996'
   }, 
 ]
 
 function App() {
   const [birthdays,setBirthDays]=useState([])
+  const [year,setYear]=useState('')
  
 useEffect(() => {
   setBirthDays(birthday)
@@ -37,8 +38,8 @@ useEffect(() => {
       <div className='weeks-wrapper'>
       {weeks.map(week=>{
         return(
-          <div>
-             <WeekCard week={week} birthdays={birthdays}/>
+          <div key={week}>
+             <WeekCard  week={week} birthdays={birthdays} year={year}/>
           </div>
         )
       })}
@@ -48,9 +49,9 @@ useEffect(() => {
           <TextArea obj={birthdays} onChange={e=>setBirthDays(e)}/>
           Copy and paste object, It allows only valid object *
         </div>
-        {/* <div>
-           <Dropdown title='Select year' options={getOption()} selected={selectedYear} dropdownSelected={dropdownSelected}/>
-        </div> */}
+        <div>
+          <input className='textInput' value={year} type='number' onChange={e=>setYear(e.target.value)}></input>
+        </div>
       </div>
     </div>
   );
